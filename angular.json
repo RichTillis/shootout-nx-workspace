@@ -21,7 +21,12 @@
               "apps/shootout-web/src/favicon.ico",
               "apps/shootout-web/src/assets"
             ],
-            "styles": ["apps/shootout-web/src/styles.scss"],
+            "styles": [
+              "apps/shootout-web/src/styles.scss",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -88,11 +93,12 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/shootout-web"],
           "options": {
-            "jestConfig": "apps/shootout-web/jest.config.js",
+            "jestConfig": "apps/shootout-web/jest.config.ts",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "shootout-web-e2e": {
       "root": "apps/shootout-web-e2e",
@@ -119,39 +125,9 @@
             "lintFilePatterns": ["apps/shootout-web-e2e/**/*.{js,ts}"]
           }
         }
-      }
-    }
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/angular",
-    "packageManager": "npm"
-  },
-  "schematics": {
-    "@nrwl/angular": {
-      "application": {
-        "linter": "eslint"
       },
-      "library": {
-        "linter": "eslint"
-      },
-      "storybook-configuration": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/angular:application": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
-    },
-    "@nrwl/angular:library": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest"
-    },
-    "@nrwl/angular:component": {
-      "style": "scss"
+      "tags": [],
+      "implicitDependencies": ["shootout-web"]
     }
-  },
-  "defaultProject": "shootout-web"
+  }
 }
