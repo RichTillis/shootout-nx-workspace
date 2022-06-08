@@ -7,7 +7,9 @@
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "scully": "npx scully --",
+    "scully:serve": "npx scully serve --"
   },
   "private": true,
   "dependencies": {
@@ -18,8 +20,14 @@
     "@angular/forms": "13.3.10",
     "@angular/platform-browser": "13.3.10",
     "@angular/platform-browser-dynamic": "13.3.10",
+    "@angular/platform-server": "^12",
     "@angular/router": "13.3.10",
     "@nrwl/angular": "14.1.9",
+    "@scullyio/init": "^2.1.32",
+    "@scullyio/ng-lib": "^2.1.0",
+    "@scullyio/platform-server": "^2.1.0",
+    "@scullyio/scully": "^2.1.0",
+    "@scullyio/scully-plugin-puppeteer": "^2.1.32",
     "primeicons": "^5.0.0",
     "primeng": "^13.4.1",
     "rxjs": "~6.6.0",

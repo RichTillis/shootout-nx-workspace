@@ -10,6 +10,7 @@ import { ScheduleModule } from './pages/schedule/schedule.module';
 import { StandingsModule } from './pages/standings/standings.module';
 
 import { ButtonModule } from 'primeng/button';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,6 +22,7 @@ import { ButtonModule } from 'primeng/button';
     HomeModule,
     ScheduleModule,
     StandingsModule,
+    ScullyLibModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
